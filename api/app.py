@@ -35,7 +35,6 @@ def insert_prediction(input_data, prediction, source):
     cursor = conn.cursor()
     
     try:
-        # Insert the input features
         cursor.execute(
             """
             INSERT INTO features (age, sex, chest_pain_type, resting_bp, cholesterol, max_hr, exercise_angina, oldpeak, st_slope)
@@ -45,17 +44,15 @@ def insert_prediction(input_data, prediction, source):
              input_data['Cholesterol'], input_data['MaxHR'], input_data['ExerciseAngina'], input_data['Oldpeak'], input_data['ST_Slope'])
         )
         
-        # Get the inserted feature's ID
         cursor.execute("SELECT id FROM features ORDER BY id DESC LIMIT 1")
         feature_id = cursor.fetchone()[0]
         
-        # Insert the prediction result along with the source and created_at
         cursor.execute(
             """
             INSERT INTO predictions (id, prediction, created_at, source) 
             VALUES (%s, %s, %s, %s)
             """, 
-            (feature_id, prediction, datetime.now(), source)  # Use datetime.now() for created_at
+            (feature_id, prediction, datetime.now(), source)
         )
         
         conn.commit()
@@ -167,7 +164,7 @@ def predict_batch_api(input_data: List[HeartDiseasePredictionRequest]):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
     
-# Batch prediction triggered by Airflow DAG (without database insertion)
+# Batch prediction triggered by Airflow DAG (including DB insertion)
 @app.post("/predict_batch_dag")
 def predict_batch_from_file(file_path: str):
     try:

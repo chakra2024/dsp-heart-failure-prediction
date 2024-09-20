@@ -1,0 +1,28 @@
+[2024-09-20T23:04:06.355+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-20T23:04:06.373+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: prediction_dag.make_predictions scheduled__2024-09-20T23:02:00+00:00 [queued]>
+[2024-09-20T23:04:06.383+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: prediction_dag.make_predictions scheduled__2024-09-20T23:02:00+00:00 [queued]>
+[2024-09-20T23:04:06.384+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-20T23:04:06.399+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): make_predictions> on 2024-09-20 23:02:00+00:00
+[2024-09-20T23:04:06.411+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'prediction_dag', 'make_predictions', 'scheduled__2024-09-20T23:02:00+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/make_prediction.py', '--cfg-path', '/tmp/tmpkki7gnvc']
+[2024-09-20T23:04:06.411+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=120) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-20T23:04:06.413+0000] {standard_task_runner.py:105} INFO - Job 83: Subtask make_predictions
+[2024-09-20T23:04:06.413+0000] {standard_task_runner.py:72} INFO - Started process 122 to run task
+[2024-09-20T23:04:06.468+0000] {task_command.py:467} INFO - Running <TaskInstance: prediction_dag.make_predictions scheduled__2024-09-20T23:02:00+00:00 [running]> on host 31cbd40558b4
+[2024-09-20T23:04:06.556+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='prediction_dag' AIRFLOW_CTX_TASK_ID='make_predictions' AIRFLOW_CTX_EXECUTION_DATE='2024-09-20T23:02:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-20T23:02:00+00:00'
+[2024-09-20T23:04:06.557+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-20T23:04:06.558+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-20T23:04:06.558+0000] {logging_mixin.py:190} INFO - Current task name:make_predictions state:running start_date:2024-09-20 23:04:06.374405+00:00
+[2024-09-20T23:04:06.559+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag and current dag run status:running
+[2024-09-20T23:04:06.559+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-20T23:04:06.569+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-20T23:04:06.581+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-20T23:04:06.582+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=prediction_dag, task_id=make_predictions, run_id=scheduled__2024-09-20T23:02:00+00:00, execution_date=20240920T230200, start_date=20240920T230406, end_date=20240920T230406
+[2024-09-20T23:04:06.594+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-09-20T23:04:06.595+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-09-20T23:04:06.595+0000] {logging_mixin.py:190} INFO - Dag name:prediction_dag queued_at:2024-09-20 23:04:01.130722+00:00
+[2024-09-20T23:04:06.596+0000] {logging_mixin.py:190} INFO - Task hostname:31cbd40558b4 operator:PythonOperator
+[2024-09-20T23:04:06.630+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-20T23:04:06.647+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-20T23:04:06.650+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
