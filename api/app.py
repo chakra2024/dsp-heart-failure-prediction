@@ -161,6 +161,28 @@ def predict_batch_api(input_data: List[HeartDiseasePredictionRequest]):
     
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+    
+# Batch prediction triggered by Airflow DAG (without database insertion)
+@app.post("/predict_batch_dag")
+def predict_batch_from_file(file_path: str):
+    try:
+        # Load the file into a DataFrame
+        df = pd.read_csv(file_path)
+        
+        # Preprocess the input data
+        processed_data = preprocessor.transform(df)
+        
+        # Get predictions
+        predictions = model.predict(processed_data).tolist()
+
+        # Add predictions to the original DataFrame
+        df['Prediction'] = predictions
+
+        # Return the features along with the predictions
+        return {"predictions_with_features": df.to_dict(orient='records')}
+    
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 # Fetch past predictions
 @app.get("/past_predictions")
