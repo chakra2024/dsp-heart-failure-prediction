@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
+from datetime import datetime
 
 # FastAPI endpoint URL
 api_url = "http://127.0.0.1:8000"
@@ -103,19 +104,44 @@ if page == "Prediction":
 elif page == "Past Predictions":
     st.title("Past Predictions")
 
+    # Date selection components (Use simpler date format '%Y-%m-%d')
+    start_date = st.sidebar.date_input("Start date", None)
+    end_date = st.sidebar.date_input("End date", None)
+
+    # Prediction source dropdown
+    source_options = ["all", "webapp", "scheduled"]
+    source = st.sidebar.selectbox("Prediction source", options=source_options)
+
+    # Convert date inputs to strings (using simplified format)
+    start_date_str = start_date.strftime('%Y-%m-%d') if start_date else None
+    end_date_str = end_date.strftime('%Y-%m-%d') if end_date else None
+
     if st.button("Fetch Past Predictions"):
+        params = {}
+
+        if start_date_str:
+            params['start_date'] = start_date_str
+        if end_date_str:
+            params['end_date'] = end_date_str
+        if source != "all":
+            params['source'] = source
+
         try:
-            response = requests.get(api_url + "/past_predictions")
+            # Fetch past predictions from API
+            response = requests.get(api_url + "/past_predictions", params=params)
             if response.status_code == 200:
                 # Get the past predictions along with features
                 past_predictions = response.json()["predictions"]
                 
-                # Convert to DataFrame for display
-                past_predictions_df = pd.DataFrame(past_predictions)
-                
-                # Display the past predictions as a DataFrame
-                st.write("Past Predictions:")
-                st.write(past_predictions_df)
+                if past_predictions:
+                    # Convert to DataFrame for display
+                    past_predictions_df = pd.DataFrame(past_predictions)
+                    
+                    # Display the past predictions as a DataFrame
+                    st.write("Past Predictions:")
+                    st.write(past_predictions_df)
+                else:
+                    st.info("No predictions found for the given filters.")
             else:
                 st.error("Error fetching past predictions.")
         except Exception as e:
