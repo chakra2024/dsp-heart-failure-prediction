@@ -144,6 +144,7 @@ Use the Past Predictions page in the Streamlit app to filter predictions based o
 Use Airflow to schedule batch predictions. Create a DAG that triggers predictions from a file and inserts them into the database.
 
 # Directory Structure
+```bash
 .
 ├── .git
 ├── airflow
@@ -175,6 +176,7 @@ Use Airflow to schedule batch predictions. Create a DAG that triggers prediction
 │   ├── webapp.py
 ├── .gitattributes
 └── README.md
+```
 
 # Contributing
 Contributions are welcome! Feel free to open a pull request or submit issues if you encounter any problems.
