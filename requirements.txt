@@ -1,0 +1,8 @@
+pandas
+numpy
+joblib
+scikit-learn
+great_expectations
+fastapi
+streamlit
+psycopg2
