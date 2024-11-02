@@ -9,6 +9,9 @@ from fastapi.middleware.cors import CORSMiddleware  # type: ignore
 import psycopg2
 from psycopg2 import sql
 from datetime import datetime
+import os
+from pathlib import Path
+
 
 # Establish database connection
 def connect_to_db():
@@ -64,8 +67,8 @@ def insert_prediction(input_data, prediction, source):
         conn.close()
 
 # Load all the model components
-model_path = r"C:\Users\SOHAM\Git_Repositories\DataScience_Projects\dsp-heart-failure-prediction\models\model.joblib"
-preprocessor_path = r"C:\Users\SOHAM\Git_Repositories\DataScience_Projects\dsp-heart-failure-prediction\models\preprocessors.joblib"
+model_path = Path("..", "models", "model.joblib").resolve()
+preprocessor_path = Path("..", "models", "preprocessors.joblib").resolve()
 
 # Load preprocessor and model for prediction
 preprocessor = joblib.load(preprocessor_path)
