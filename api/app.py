@@ -28,6 +28,33 @@ def connect_to_db():
         print(f"Error connecting to database: {e}")
         return None
 
+def create_features_table(cursor):
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS features (
+            id SERIAL PRIMARY KEY,
+            age INTEGER,
+            sex VARCHAR(10),
+            chest_pain_type VARCHAR(20),
+            resting_bp INTEGER,
+            cholesterol INTEGER,
+            max_hr INTEGER,
+            exercise_angina VARCHAR(10),
+            oldpeak FLOAT,
+            st_slope VARCHAR(10)
+        )
+    """)
+
+def create_predictions_table(cursor):
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS predictions (
+            id INTEGER PRIMARY KEY,
+            prediction VARCHAR(10),
+            created_at TIMESTAMP,
+            source VARCHAR(50),
+            FOREIGN KEY (id) REFERENCES features (id) ON DELETE CASCADE
+        )
+    """)
+
 # Function to insert prediction result into the database
 def insert_prediction(input_data, prediction, source):
     conn = connect_to_db()
@@ -38,6 +65,8 @@ def insert_prediction(input_data, prediction, source):
     cursor = conn.cursor()
     
     try:
+        create_features_table(cursor)
+        create_predictions_table(cursor)
         cursor.execute(
             """
             INSERT INTO features (age, sex, chest_pain_type, resting_bp, cholesterol, max_hr, exercise_angina, oldpeak, st_slope)
@@ -67,8 +96,8 @@ def insert_prediction(input_data, prediction, source):
         conn.close()
 
 # Load all the model components
-model_path = Path("..", "models", "model.joblib").resolve()
-preprocessor_path = Path("..", "models", "preprocessors.joblib").resolve()
+model_path = Path("models", "model.joblib").resolve()
+preprocessor_path = Path("models", "preprocessors.joblib").resolve()
 
 # Load preprocessor and model for prediction
 preprocessor = joblib.load(preprocessor_path)
