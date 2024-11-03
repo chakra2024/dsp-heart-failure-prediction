@@ -4,6 +4,7 @@ from airflow.models import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 from random import choice
+from airflow.exceptions import AirflowSkipException
 import os
 
 def read_data(**kwargs):
@@ -20,7 +21,7 @@ def read_data(**kwargs):
     tot_dir_files = os.listdir(raw_data_folder)
     
     if not tot_dir_files:
-        raise ValueError("No files in the folder")
+        raise AirflowSkipException("No files in the folder, skipping DAG execution.")
     
     file_name = choice(tot_dir_files)
     file_path = os.path.join(raw_data_folder, file_name)
@@ -32,7 +33,16 @@ def read_data(**kwargs):
     
     return df
 
-def save_data(**kwargs):
+def validate_data(**kwargs):
+    return
+
+def send_alerts(**kwargs):
+    return
+
+def save_statistics(**kwargs):
+    return
+
+def save_file(**kwargs):
     ti = kwargs['ti']
     file_path = ti.xcom_pull(key='file_path')
     file_name = ti.xcom_pull(key='file_name')
@@ -61,19 +71,34 @@ with DAG(
     catchup=False,
 ) as dag:
     
-    Reading_file = PythonOperator(
+    read_data = PythonOperator(
         task_id="read_data",
         python_callable=read_data,
         provide_context=True
     )
-
-    moving_file = PythonOperator(
+    validate_data = PythonOperator(
         task_id = "validate_data",
-        python_callable=save_data,
+        python_callable=validate_data,
+        provide_context=True
+    )
+    send_alerts = PythonOperator(
+        task_id = "send_alerts",
+        python_callable=send_alerts,
+        provide_context=True
+    )
+    save_file = PythonOperator(
+        task_id = "save_file",
+        python_callable=save_file,
+        provide_context=True
+    )
+    save_statistics = PythonOperator(
+        task_id = "save_statistics",
+        python_callable=save_statistics,
         provide_context=True
     )
 
-    Reading_file >> moving_file
+    read_data >> validate_data
+    validate_data >> [send_alerts, save_file, save_statistics]
 
 
 
