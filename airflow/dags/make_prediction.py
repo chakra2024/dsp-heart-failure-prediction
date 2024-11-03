@@ -90,7 +90,7 @@ def make_predictions(**kwargs):
 with DAG(
     'prediction_dag',
     default_args={'owner': 'airflow'},
-    schedule_interval='*/2 * * * *',
+    schedule_interval='* * * * *',
     start_date=datetime.datetime(2024, 9, 20),
     catchup=False
 ) as dag:

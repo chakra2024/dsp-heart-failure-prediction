@@ -56,19 +56,19 @@ def save_data(**kwargs):
 with DAG(
     dag_id="Read_data_and_move_data",
     description="Reading data from raw data folder",
-    schedule_interval="*/10 * * * *",
+    schedule_interval="* * * * *",
     start_date=datetime(2024, 9, 15),
     catchup=False,
 ) as dag:
     
     Reading_file = PythonOperator(
-        task_id="Read_dataset_files",
+        task_id="read_data",
         python_callable=read_data,
         provide_context=True
     )
 
     moving_file = PythonOperator(
-        task_id = "Move_data_to_processed_folder",
+        task_id = "validate_data",
         python_callable=save_data,
         provide_context=True
     )
