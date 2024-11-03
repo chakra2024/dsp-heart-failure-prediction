@@ -7,7 +7,16 @@ from random import choice
 import os
 
 def read_data(**kwargs):
-    raw_data_folder = '/opt/airflow/raw_data'
+    docker_raw_data_folder = '/opt/airflow/raw_data'
+    system_raw_data_folder = '../airflow/raw_data'
+    raw_data_folder = ''
+    if os.path.exists(docker_raw_data_folder):
+        raw_data_folder = docker_raw_data_folder
+    elif os.path.exists(system_raw_data_folder):
+        raw_data_folder = system_raw_data_folder
+    else:
+        raise ValueError("Path dont exit")
+
     tot_dir_files = os.listdir(raw_data_folder)
     
     if not tot_dir_files:
@@ -28,7 +37,15 @@ def save_data(**kwargs):
     file_path = ti.xcom_pull(key='file_path')
     file_name = ti.xcom_pull(key='file_name')
 
-    processed_data_folder = '/opt/airflow/processed_data'
+    docker_processed_data_folder = '/opt/airflow/processed_data'
+    system_processed_data_folder = '../airflow/processed_data'
+    processed_data_folder = ''
+    if os.path.exists(docker_processed_data_folder):
+        processed_data_folder = docker_processed_data_folder
+    elif os.path.exists(system_processed_data_folder):
+        processed_data_folder = system_processed_data_folder
+    else:
+        raise ValueError("Path dont exit")
     destination_path = os.path.join(processed_data_folder,file_name)
     shutil.move(file_path, destination_path)
 
