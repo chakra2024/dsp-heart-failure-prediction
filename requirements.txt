@@ -1,0 +1,9 @@
+apache-airflow==2.8.2 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.8.2/constraints-3.10.txt
+pandas
+numpy
+joblib
+scikit-learn
+great_expectations
+fastapi
+streamlit
+psycopg2
