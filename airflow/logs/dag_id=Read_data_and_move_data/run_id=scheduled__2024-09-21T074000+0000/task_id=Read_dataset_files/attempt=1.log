@@ -1,0 +1,41 @@
+[2024-09-21T07:59:17.690+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-21T07:59:17.726+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Read_data_and_move_data.Read_dataset_files scheduled__2024-09-21T07:40:00+00:00 [queued]>
+[2024-09-21T07:59:17.737+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Read_data_and_move_data.Read_dataset_files scheduled__2024-09-21T07:40:00+00:00 [queued]>
+[2024-09-21T07:59:17.738+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-21T07:59:17.755+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): Read_dataset_files> on 2024-09-21 07:40:00+00:00
+[2024-09-21T07:59:17.779+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Read_data_and_move_data', 'Read_dataset_files', 'scheduled__2024-09-21T07:40:00+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmp823qni67']
+[2024-09-21T07:59:17.778+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=57) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-21T07:59:17.782+0000] {standard_task_runner.py:105} INFO - Job 109: Subtask Read_dataset_files
+[2024-09-21T07:59:17.783+0000] {standard_task_runner.py:72} INFO - Started process 68 to run task
+[2024-09-21T07:59:17.904+0000] {task_command.py:467} INFO - Running <TaskInstance: Read_data_and_move_data.Read_dataset_files scheduled__2024-09-21T07:40:00+00:00 [running]> on host f1690ee498f7
+[2024-09-21T07:59:18.117+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Read_data_and_move_data' AIRFLOW_CTX_TASK_ID='Read_dataset_files' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T07:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-21T07:40:00+00:00'
+[2024-09-21T07:59:18.121+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-21T07:59:18.122+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-21T07:59:18.123+0000] {logging_mixin.py:190} INFO - Current task name:Read_dataset_files state:running start_date:2024-09-21 07:59:17.727595+00:00
+[2024-09-21T07:59:18.124+0000] {logging_mixin.py:190} INFO - Dag name:Read_data_and_move_data and current dag run status:running
+[2024-09-21T07:59:18.125+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-21T07:59:18.235+0000] {python.py:240} INFO - Done. Returned value was:     Age Sex ChestPainType  RestingBP  ...  MaxHR  ExerciseAngina Oldpeak  ST_Slope
+0    59   M           ASY        154  ...    131               Y     1.5        Up
+1    61   M           NAP        120  ...     80               Y     0.0      Flat
+2    40   M           ASY        125  ...    165               N     0.0      Flat
+3    61   M           ASY        134  ...     86               N     1.5      Flat
+4    41   M           ASY        104  ...    111               N     0.0        Up
+..  ...  ..           ...        ...  ...    ...             ...     ...       ...
+86   76   M           NAP        104  ...    120               N     3.5      Down
+87   54   F           ASY        138  ...    105               Y     1.5      Flat
+88   70   M           ASY        170  ...    129               Y     3.0      Down
+89   61   F           ATA        140  ...    120               Y     0.0        Up
+90   48   M           ASY        132  ...    139               N     0.2        Up
+
+[91 rows x 11 columns]
+[2024-09-21T07:59:18.757+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-21T07:59:18.765+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Read_data_and_move_data, task_id=Read_dataset_files, run_id=scheduled__2024-09-21T07:40:00+00:00, execution_date=20240921T074000, start_date=20240921T075917, end_date=20240921T075918
+[2024-09-21T07:59:18.782+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-09-21T07:59:18.783+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-09-21T07:59:18.783+0000] {logging_mixin.py:190} INFO - Dag name:Read_data_and_move_data queued_at:2024-09-21 07:58:54.105184+00:00
+[2024-09-21T07:59:18.784+0000] {logging_mixin.py:190} INFO - Task hostname:f1690ee498f7 operator:PythonOperator
+[2024-09-21T07:59:18.813+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-21T07:59:18.919+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-21T07:59:18.926+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
