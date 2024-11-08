@@ -1,17 +1,15 @@
-from typing import List
-from fastapi import FastAPI, HTTPException
+from typing import List, Union
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from pydantic import BaseModel
 import joblib
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, OrdinalEncoder
-from fastapi.middleware.cors import CORSMiddleware  # type: ignore
+from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
 from psycopg2 import sql
 from datetime import datetime
-import os
-from pathlib import Path
-
+from fastapi import Request
 
 # Establish database connection
 def connect_to_db():
@@ -20,7 +18,7 @@ def connect_to_db():
             dbname="dsphealth",
             user="postgres",
             password="postgres",
-            host="localhost",  # If hosted elsewhere, change this to the correct server address
+            host="localhost",
             port="5432"
         )
         return conn
@@ -28,69 +26,58 @@ def connect_to_db():
         print(f"Error connecting to database: {e}")
         return None
 
-def create_features_table(cursor):
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS features (
-            id SERIAL PRIMARY KEY,
-            age INTEGER,
-            sex VARCHAR(10),
-            chest_pain_type VARCHAR(20),
-            resting_bp INTEGER,
-            cholesterol INTEGER,
-            max_hr INTEGER,
-            exercise_angina VARCHAR(10),
-            oldpeak FLOAT,
-            st_slope VARCHAR(10)
-        )
-    """)
 
-def create_predictions_table(cursor):
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS predictions (
-            id INTEGER PRIMARY KEY,
-            prediction VARCHAR(10),
-            created_at TIMESTAMP,
-            source VARCHAR(50),
-            FOREIGN KEY (id) REFERENCES features (id) ON DELETE CASCADE
-        )
-    """)
-
-# Function to insert prediction result into the database
-def insert_prediction(input_data, prediction, source):
+# Function to insert multiple predictions into the database
+def batch_insert_predictions(input_data_list, predictions, source):
     conn = connect_to_db()
     if conn is None:
         print("Error: Could not connect to database.")
         return
-    
+
     cursor = conn.cursor()
-    
+
     try:
-        create_features_table(cursor)
-        create_predictions_table(cursor)
-        cursor.execute(
+
+        # Prepare data for batch insertion
+        features_data = [
+            (
+                data['Age'], data['Sex'], data['ChestPainType'], data['RestingBP'], 
+                data['Cholesterol'], data['MaxHR'], data['ExerciseAngina'], data['Oldpeak'], data['ST_Slope']
+            ) 
+            for data in input_data_list
+        ]
+
+        cursor.executemany(
+
             """
             INSERT INTO features (age, sex, chest_pain_type, resting_bp, cholesterol, max_hr, exercise_angina, oldpeak, st_slope)
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            """,
-            (input_data['Age'], input_data['Sex'], input_data['ChestPainType'], input_data['RestingBP'], 
-             input_data['Cholesterol'], input_data['MaxHR'], input_data['ExerciseAngina'], input_data['Oldpeak'], input_data['ST_Slope'])
-        )
-        
-        cursor.execute("SELECT id FROM features ORDER BY id DESC LIMIT 1")
-        feature_id = cursor.fetchone()[0]
-        
-        cursor.execute(
             """
-            INSERT INTO predictions (id, prediction, created_at, source) 
-            VALUES (%s, %s, %s, %s)
-            """, 
-            (feature_id, prediction, datetime.now(), source)
+            , features_data
         )
-        
+
+        # Retrieve feature IDs for recently inserted records
+        cursor.execute("SELECT id FROM features ORDER BY id DESC LIMIT %s", (len(input_data_list),))
+        feature_ids = [row[0] for row in cursor.fetchall()]
+
+        # Prepare prediction data for batch insertion
+        prediction_data = [
+            (feature_ids[i], predictions[i], datetime.now(), source)
+            for i in range(len(input_data_list))
+        ]
+
+        cursor.executemany(
+            """
+            INSERT INTO predictions (id, prediction, created_at, source)
+            VALUES (%s, %s, %s, %s)
+            """
+            , prediction_data
+        )
+
         conn.commit()
     except Exception as e:
         conn.rollback()
-        print(f"Error inserting prediction into database: {e}")
+        print(f"Error inserting predictions into database: {e}")
     finally:
         cursor.close()
         conn.close()
@@ -115,13 +102,13 @@ origins = [
 # Allow CORS for all origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
-    allow_headers=["*"],  # Allow all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-# Define the request body structure
+# Define the request body structure for single prediction
 class HeartDiseasePredictionRequest(BaseModel):
     Age: int
     Sex: str
@@ -136,94 +123,60 @@ class HeartDiseasePredictionRequest(BaseModel):
 # Root endpoint to show information
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the Heart Failure Prediction API. Go to /predict to make a prediction."}
+    return {"message": "Welcome to the Heart Failure Prediction API. Use /predict for predictions and /past_predictions for history."}
 
 # Define preprocessing function
-def preprocess_input(data: dict):
-    # Convert the dictionary into a dataframe
-    df = pd.DataFrame([data])
+def preprocess_input(data: pd.DataFrame):
     # Preprocess data using existing joblib
-    processed_data = preprocessor.transform(df)
+    processed_data = preprocessor.transform(data)
     return processed_data
 
-# Predict endpoint for single prediction
+# Predict endpoint for single or batch prediction
 @app.post("/predict")
-async def predict(request_data: HeartDiseasePredictionRequest):
+async def predict(
+    request: Request,
+    file: UploadFile = File(None)
+):
     try:
-        # Preprocess the input
-        input_data = preprocess_input(request_data.dict())
-        
-        # Make the prediction
-        prediction = model.predict(input_data)[0]  # Get the first value from the prediction array
-        
-        # Insert the prediction and input into the database with "webapp" as the source
-        insert_prediction(request_data.dict(), int(prediction), source="webapp")
+        json_data = None
 
-        # Add the prediction to the input data
-        result = request_data.dict()
-        result["Prediction"] = int(prediction)
+        # Check if JSON data is provided
+        if request.headers.get("Content-Type") == "application/json":
+            json_data = await request.json()
+            print("Received JSON data:", json_data)
         
-        # Return the input features along with the prediction
-        return {"prediction_with_features": result}
-    
+        # Handle single or batch JSON input
+        if json_data:
+            if isinstance(json_data, list):  # Batch JSON
+                df = pd.DataFrame(json_data)
+            else:  # Single JSON input
+                df = pd.DataFrame([json_data])
+            source = "webapp"
+        
+        # Handle CSV file upload
+        elif file:
+            df = pd.read_csv(file.file)
+            source = "scheduled"
+        
+        else:
+            raise HTTPException(status_code=400, detail="No input data provided")
+
+        # Preprocess the input data and get predictions
+        processed_data = preprocessor.transform(df)
+        predictions = model.predict(processed_data).tolist()
+
+        # Prepare output with predictions
+        df['Prediction'] = ["Risk of heart failure" if pred == 1 else "No risk of heart failure" for pred in predictions]
+
+        # Insert records if needed for other parts
+        input_data_list = df.to_dict(orient="records")
+        # Add your batch_insert_predictions function call here if necessary
+        
+        return {"predictions_with_features": input_data_list}
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error during prediction: {str(e)}")
-    
-    
-# Predict endpoint for batch prediction
-@app.post("/predict_batch")
-def predict_batch_api(input_data: List[HeartDiseasePredictionRequest]):
-    try:
-        # Convert input data to a DataFrame
-        df = pd.DataFrame([item.dict() for item in input_data])
-        
-        # Preprocess the input data
-        processed_data = preprocessor.transform(df)
-        
-        # Get predictions
-        predictions = model.predict(processed_data).tolist()
 
-        # Insert each prediction and input into the database with date and source
-        for i in range(len(input_data)):
-            insert_prediction(input_data[i].dict(), predictions[i], source="webapp")  # Source is webapp
-
-        # Add predictions to the original DataFrame
-        df['Prediction'] = predictions
-
-        # Return the features along with the predictions
-        return {"predictions_with_features": df.to_dict(orient='records')}
-    
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    
-# Batch prediction triggered by Airflow DAG (including DB insertion)
-@app.post("/predict_batch_dag")
-def predict_batch_from_file(file_path: str):
-    try:
-        # Load the file into a DataFrame
-        df = pd.read_csv(file_path)
-        
-        # Preprocess the input data
-        processed_data = preprocessor.transform(df)
-        
-        # Get predictions
-        predictions = model.predict(processed_data).tolist()
-
-        # Insert each prediction and input into the database with date and source
-        for i in range(len(df)):
-            input_data = df.iloc[i].to_dict()  # Convert the row to a dictionary
-            insert_prediction(input_data, predictions[i], source="scheduled")  # Source is scheduled
-        
-        # Add predictions to the original DataFrame
-        df['Prediction'] = predictions
-
-        # Return the features along with the predictions
-        return {"predictions_with_features": df.to_dict(orient='records')}
-    
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
-
-    
 # Fetch Past Predictions    
 @app.get("/past_predictions")
 def fetch_past_predictions(start_date: str = None, end_date: str = None, source: str = "all"):
@@ -245,7 +198,7 @@ def fetch_past_predictions(start_date: str = None, end_date: str = None, source:
 
         params = []
 
-        # Apply date range filter (using %Y-%m-%d)
+        # Apply date range filter
         if start_date:
             query += " AND p.created_at >= %s"
             params.append(datetime.strptime(start_date, '%Y-%m-%d'))
@@ -266,9 +219,8 @@ def fetch_past_predictions(start_date: str = None, end_date: str = None, source:
         conn.close()
 
         # Structure the output data
-        results = []
-        for record in records:
-            result = {
+        results = [
+            {
                 "Age": record[0],
                 "Sex": record[1],
                 "ChestPainType": record[2],
@@ -280,9 +232,10 @@ def fetch_past_predictions(start_date: str = None, end_date: str = None, source:
                 "ST_Slope": record[8],
                 "Prediction": "Risk of heart failure" if record[9] == 1 else "No risk of heart failure",
                 "Source": record[10],
-                "Created At": record[11].strftime('%Y-%m-%d %H:%M:%S')  # Keeping original datetime for display
+                "Created At": record[11].strftime('%Y-%m-%d %H:%M:%S')
             }
-            results.append(result)
+            for record in records
+        ]
 
         return {"predictions": results}
 
