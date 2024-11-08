@@ -26,6 +26,7 @@ def connect_to_db():
         print(f"Error connecting to database: {e}")
         return None
 
+
 # Function to insert multiple predictions into the database
 def batch_insert_predictions(input_data_list, predictions, source):
     conn = connect_to_db()
@@ -36,6 +37,7 @@ def batch_insert_predictions(input_data_list, predictions, source):
     cursor = conn.cursor()
 
     try:
+
         # Prepare data for batch insertion
         features_data = [
             (
@@ -46,6 +48,7 @@ def batch_insert_predictions(input_data_list, predictions, source):
         ]
 
         cursor.executemany(
+
             """
             INSERT INTO features (age, sex, chest_pain_type, resting_bp, cholesterol, max_hr, exercise_angina, oldpeak, st_slope)
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
@@ -80,8 +83,8 @@ def batch_insert_predictions(input_data_list, predictions, source):
         conn.close()
 
 # Load all the model components
-model_path = r"C:\Users\SOHAM\Git_Repositories\DataScience_Projects\dsp-heart-failure-prediction\models\model.joblib"
-preprocessor_path = r"C:\Users\SOHAM\Git_Repositories\DataScience_Projects\dsp-heart-failure-prediction\models\preprocessors.joblib"
+model_path = Path("models", "model.joblib").resolve()
+preprocessor_path = Path("models", "preprocessors.joblib").resolve()
 
 # Load preprocessor and model for prediction
 preprocessor = joblib.load(preprocessor_path)

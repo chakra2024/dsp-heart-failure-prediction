@@ -8,8 +8,7 @@ fastapi==0.115.3
 flake8
 great_expectations==0.18.19
 python-multipart==0.0.17
-
-
+apache-airflow==2.8.2
 
 
 

@@ -9,7 +9,17 @@ from psycopg2.extras import Json
 from airflow.models import Variable
 from airflow.utils.dates import days_ago
 
-path_to_stored_data = r"C:\Users\SOHAM\Git_Repositories\DataScience_Projects\dsp-heart-failure-prediction\airflow\processed_data"
+
+docker_path_to_stored_data = '/opt/airflow/processed_data'
+system_path_to_stored_data = '../airflow/processed_data'
+path_to_stored_data = ''
+
+if os.path.exists(docker_path_to_stored_data):
+    path_to_stored_data = docker_path_to_stored_data
+elif os.path.exists(system_path_to_stored_data):
+    path_to_stored_data = system_path_to_stored_data
+else:
+    raise ValueError("Path dont exit")
 
 DATABASE_HOST = "localhost"
 DATABASE_PORT = 5432
@@ -80,7 +90,7 @@ def make_predictions(**kwargs):
 with DAG(
     'prediction_dag',
     default_args={'owner': 'airflow'},
-    schedule_interval='*/2 * * * *',
+    schedule_interval='* * * * *',
     start_date=datetime.datetime(2024, 9, 20),
     catchup=False
 ) as dag:
