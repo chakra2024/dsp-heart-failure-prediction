@@ -44,20 +44,17 @@ if page == "Prediction":
                     "Oldpeak": Oldpeak,
                     "ST_Slope": ST_Slope,
                 }
-
+                
                 # Send the request to the API for single prediction
                 try:
-                    response = requests.post(api_url + "/predict", json=input_data)
+                    response = requests.post(api_url + "/predict", json=[input_data])  # Wrap single input in a list
                     if response.status_code == 200:
                         # Extract the response
-                        prediction_with_features = response.json()["prediction_with_features"]
-
-                        # Convert to DataFrame for display
-                        result_df = pd.DataFrame([prediction_with_features])
+                        prediction_with_features = response.json()["predictions_with_features"][0]
 
                         # Display the result as a DataFrame
                         st.success("Prediction with Features:")
-                        st.write(result_df)
+                        st.write(pd.DataFrame([prediction_with_features]))
                         
                         # Display the prediction message
                         st.success(f"Prediction: {'Heart Disease Detected' if prediction_with_features['Prediction'] == 1 else 'No Heart Disease'}")
@@ -65,7 +62,6 @@ if page == "Prediction":
                         st.error(f"Error during prediction: {response.json()['detail']}")
                 except Exception as e:
                     st.error(f"Error: {str(e)}")
-
 
     elif prediction_mode == "Batch Prediction (CSV)":
         uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
@@ -82,7 +78,7 @@ if page == "Prediction":
 
                     # Send the request to the API for batch prediction
                     try:
-                        response = requests.post(f"{api_url}/predict_batch", json=input_data)
+                        response = requests.post(api_url + "/predict", json=input_data)
                         if response.status_code == 200:
                             # Get the predictions along with the input features
                             predictions_with_features = response.json()["predictions_with_features"]
@@ -99,7 +95,6 @@ if page == "Prediction":
                         st.error(f"Error: {str(e)}")
             except Exception as e:
                 st.error(f"Error processing the file: {str(e)}")
-
 
 elif page == "Past Predictions":
     st.title("Past Predictions")

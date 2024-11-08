@@ -3,7 +3,7 @@ import os
 
 og_file_path = r"C:\Users\SOHAM\Git_Repositories\DataScience_Projects\dsp-heart-failure-prediction\airflow\main_data\heart.csv"
 file = pd.read_csv(og_file_path)
-total_no_of_files = 10
+total_no_of_files = 50
 no_of_rows_per_file = len(file) // total_no_of_files
 
 for i in range(total_no_of_files):

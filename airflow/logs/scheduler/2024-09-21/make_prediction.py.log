@@ -1,0 +1,350 @@
+[2024-09-21T07:58:52.777+0000] {processor.py:186} INFO - Started process (PID=35) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:58:52.803+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T07:58:52.880+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:58:52.879+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:58:53.139+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:58:53.516+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:58:53.515+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T07:58:53.670+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:58:53.669+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 07:56:00+00:00, run_after=2024-09-21 07:58:00+00:00
+[2024-09-21T07:58:53.832+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 1.157 seconds
+[2024-09-21T07:59:24.498+0000] {processor.py:186} INFO - Started process (PID=119) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:59:24.499+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T07:59:24.504+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:59:24.502+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:59:24.532+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:59:24.558+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:59:24.558+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T07:59:24.619+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:59:24.619+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 07:58:00+00:00, run_after=2024-09-21 08:00:00+00:00
+[2024-09-21T07:59:24.644+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.154 seconds
+[2024-09-21T07:59:54.802+0000] {processor.py:186} INFO - Started process (PID=183) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:59:54.805+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T07:59:54.810+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:59:54.809+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:59:54.847+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T07:59:54.889+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:59:54.888+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T07:59:54.943+0000] {logging_mixin.py:190} INFO - [2024-09-21T07:59:54.943+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 07:58:00+00:00, run_after=2024-09-21 08:00:00+00:00
+[2024-09-21T07:59:54.988+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.197 seconds
+[2024-09-21T08:01:28.132+0000] {processor.py:186} INFO - Started process (PID=29) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:01:28.135+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:01:28.141+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:01:28.140+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:01:28.185+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:01:28.250+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:01:28.250+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:01:28.302+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:01:28.302+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:00:00+00:00, run_after=2024-09-21 08:02:00+00:00
+[2024-09-21T08:01:28.335+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.218 seconds
+[2024-09-21T08:01:59.282+0000] {processor.py:186} INFO - Started process (PID=93) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:01:59.284+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:01:59.288+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:01:59.288+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:01:59.328+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:01:59.369+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:01:59.368+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:01:59.413+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:01:59.412+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:00:00+00:00, run_after=2024-09-21 08:02:00+00:00
+[2024-09-21T08:01:59.451+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.180 seconds
+[2024-09-21T08:02:30.027+0000] {processor.py:186} INFO - Started process (PID=158) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:02:30.029+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:02:30.033+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:02:30.032+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:02:30.067+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:02:30.096+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:02:30.096+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:02:30.136+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:02:30.136+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:02:00+00:00, run_after=2024-09-21 08:04:00+00:00
+[2024-09-21T08:02:30.167+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.147 seconds
+[2024-09-21T08:03:00.625+0000] {processor.py:186} INFO - Started process (PID=222) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:03:00.626+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:03:00.631+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:03:00.631+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:03:00.673+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:03:00.721+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:03:00.720+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:03:00.773+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:03:00.772+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:02:00+00:00, run_after=2024-09-21 08:04:00+00:00
+[2024-09-21T08:03:00.818+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.202 seconds
+[2024-09-21T08:03:31.613+0000] {processor.py:186} INFO - Started process (PID=285) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:03:31.617+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:03:31.630+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:03:31.629+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:03:31.683+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:03:31.722+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:03:31.721+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:03:31.774+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:03:31.773+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:02:00+00:00, run_after=2024-09-21 08:04:00+00:00
+[2024-09-21T08:03:31.815+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.212 seconds
+[2024-09-21T08:04:02.102+0000] {processor.py:186} INFO - Started process (PID=350) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:04:02.103+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:04:02.107+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:04:02.106+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:04:02.138+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:04:02.166+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:04:02.166+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:04:02.205+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:04:02.205+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:04:00+00:00, run_after=2024-09-21 08:06:00+00:00
+[2024-09-21T08:04:02.235+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.143 seconds
+[2024-09-21T08:04:32.398+0000] {processor.py:186} INFO - Started process (PID=414) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:04:32.400+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:04:32.404+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:04:32.403+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:04:32.440+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:04:32.469+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:04:32.469+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:04:32.512+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:04:32.512+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:04:00+00:00, run_after=2024-09-21 08:06:00+00:00
+[2024-09-21T08:04:32.544+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.155 seconds
+[2024-09-21T08:05:02.614+0000] {processor.py:186} INFO - Started process (PID=478) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:05:02.616+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:05:02.619+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:05:02.619+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:05:02.654+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:05:02.692+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:05:02.692+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:05:02.734+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:05:02.734+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:04:00+00:00, run_after=2024-09-21 08:06:00+00:00
+[2024-09-21T08:05:02.776+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.169 seconds
+[2024-09-21T08:05:33.830+0000] {processor.py:186} INFO - Started process (PID=542) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:05:33.832+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:05:33.836+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:05:33.835+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:05:33.867+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:05:33.895+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:05:33.895+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:05:33.934+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:05:33.934+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:04:00+00:00, run_after=2024-09-21 08:06:00+00:00
+[2024-09-21T08:05:33.967+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.144 seconds
+[2024-09-21T08:06:04.962+0000] {processor.py:186} INFO - Started process (PID=607) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:06:04.964+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:06:04.969+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:06:04.968+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:06:05.009+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:06:05.042+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:06:05.041+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:06:05.083+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:06:05.083+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:06:00+00:00, run_after=2024-09-21 08:08:00+00:00
+[2024-09-21T08:06:05.115+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.160 seconds
+[2024-09-21T08:06:35.739+0000] {processor.py:186} INFO - Started process (PID=671) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:06:35.740+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:06:35.744+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:06:35.743+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:06:35.778+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:06:35.810+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:06:35.810+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:06:35.852+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:06:35.852+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:06:00+00:00, run_after=2024-09-21 08:08:00+00:00
+[2024-09-21T08:06:35.887+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.155 seconds
+[2024-09-21T08:07:06.268+0000] {processor.py:186} INFO - Started process (PID=735) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:07:06.272+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:07:06.278+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:07:06.277+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:07:06.311+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:07:06.345+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:07:06.345+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:07:06.392+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:07:06.392+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:06:00+00:00, run_after=2024-09-21 08:08:00+00:00
+[2024-09-21T08:07:06.430+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.191 seconds
+[2024-09-21T08:07:37.063+0000] {processor.py:186} INFO - Started process (PID=799) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:07:37.065+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:07:37.070+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:07:37.070+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:07:37.107+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:07:37.141+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:07:37.141+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:07:37.188+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:07:37.187+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:06:00+00:00, run_after=2024-09-21 08:08:00+00:00
+[2024-09-21T08:07:37.227+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.172 seconds
+[2024-09-21T08:08:07.624+0000] {processor.py:186} INFO - Started process (PID=863) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:08:07.627+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:08:07.633+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:08:07.632+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:08:07.681+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:08:07.715+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:08:07.715+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:08:07.793+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:08:07.793+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:08:00+00:00, run_after=2024-09-21 08:10:00+00:00
+[2024-09-21T08:08:07.845+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.238 seconds
+[2024-09-21T08:08:38.185+0000] {processor.py:186} INFO - Started process (PID=927) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:08:38.187+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:08:38.193+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:08:38.192+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:08:38.228+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:08:38.260+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:08:38.260+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:08:38.305+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:08:38.305+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:08:00+00:00, run_after=2024-09-21 08:10:00+00:00
+[2024-09-21T08:08:38.344+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.170 seconds
+[2024-09-21T08:09:08.607+0000] {processor.py:186} INFO - Started process (PID=997) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:09:08.609+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:09:08.613+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:09:08.612+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:09:08.643+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:09:08.674+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:09:08.673+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:09:08.719+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:09:08.718+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:08:00+00:00, run_after=2024-09-21 08:10:00+00:00
+[2024-09-21T08:09:08.753+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.152 seconds
+[2024-09-21T08:09:39.632+0000] {processor.py:186} INFO - Started process (PID=1061) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:09:39.634+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:09:39.639+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:09:39.638+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:09:39.675+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:09:39.709+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:09:39.708+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:09:39.756+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:09:39.756+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:08:00+00:00, run_after=2024-09-21 08:10:00+00:00
+[2024-09-21T08:09:39.798+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.181 seconds
+[2024-09-21T08:10:10.365+0000] {processor.py:186} INFO - Started process (PID=1129) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:10:10.366+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:10:10.370+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:10:10.369+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:10:10.402+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:10:10.430+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:10:10.429+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:10:10.473+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:10:10.472+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:10:00+00:00, run_after=2024-09-21 08:12:00+00:00
+[2024-09-21T08:10:10.501+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.144 seconds
+[2024-09-21T08:10:41.525+0000] {processor.py:186} INFO - Started process (PID=1193) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:10:41.528+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:10:41.535+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:10:41.534+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:10:41.579+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:10:41.614+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:10:41.613+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:10:41.665+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:10:41.665+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:10:00+00:00, run_after=2024-09-21 08:12:00+00:00
+[2024-09-21T08:10:41.704+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.190 seconds
+[2024-09-21T08:11:12.113+0000] {processor.py:186} INFO - Started process (PID=1258) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:11:12.116+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:11:12.120+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:11:12.120+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:11:12.173+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:11:12.213+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:11:12.212+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:11:12.263+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:11:12.263+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:10:00+00:00, run_after=2024-09-21 08:12:00+00:00
+[2024-09-21T08:11:12.308+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.205 seconds
+[2024-09-21T08:11:43.074+0000] {processor.py:186} INFO - Started process (PID=1322) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:11:43.077+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:11:43.081+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:11:43.081+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:11:43.121+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:11:43.158+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:11:43.157+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:11:43.210+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:11:43.209+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:10:00+00:00, run_after=2024-09-21 08:12:00+00:00
+[2024-09-21T08:11:43.250+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.189 seconds
+[2024-09-21T08:12:13.466+0000] {processor.py:186} INFO - Started process (PID=1386) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:12:13.469+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:12:13.475+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:12:13.474+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:12:13.546+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:12:13.582+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:12:13.581+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:12:13.631+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:12:13.631+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:12:00+00:00, run_after=2024-09-21 08:14:00+00:00
+[2024-09-21T08:12:13.667+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.220 seconds
+[2024-09-21T08:12:44.387+0000] {processor.py:186} INFO - Started process (PID=1451) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:12:44.389+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:12:44.395+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:12:44.394+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:12:44.449+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:12:44.491+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:12:44.491+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:12:44.540+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:12:44.540+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:12:00+00:00, run_after=2024-09-21 08:14:00+00:00
+[2024-09-21T08:12:44.577+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.201 seconds
+[2024-09-21T08:13:14.865+0000] {processor.py:186} INFO - Started process (PID=1515) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:13:14.867+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:13:14.872+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:13:14.871+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:13:14.904+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:13:14.941+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:13:14.940+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:13:14.992+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:13:14.991+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:12:00+00:00, run_after=2024-09-21 08:14:00+00:00
+[2024-09-21T08:13:15.084+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.231 seconds
+[2024-09-21T08:13:45.440+0000] {processor.py:186} INFO - Started process (PID=1579) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:13:45.442+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:13:45.447+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:13:45.446+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:13:45.487+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:13:45.521+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:13:45.521+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:13:45.567+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:13:45.567+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:12:00+00:00, run_after=2024-09-21 08:14:00+00:00
+[2024-09-21T08:13:45.605+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.174 seconds
+[2024-09-21T08:14:16.654+0000] {processor.py:186} INFO - Started process (PID=1643) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:14:16.657+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:14:16.662+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:14:16.662+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:14:16.713+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:14:16.753+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:14:16.752+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:14:16.801+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:14:16.801+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:14:00+00:00, run_after=2024-09-21 08:16:00+00:00
+[2024-09-21T08:14:16.839+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.197 seconds
+[2024-09-21T08:14:47.452+0000] {processor.py:186} INFO - Started process (PID=1707) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:14:47.454+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:14:47.460+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:14:47.459+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:14:47.499+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:14:47.533+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:14:47.532+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:14:47.580+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:14:47.579+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:14:00+00:00, run_after=2024-09-21 08:16:00+00:00
+[2024-09-21T08:14:47.618+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.177 seconds
+[2024-09-21T08:15:18.519+0000] {processor.py:186} INFO - Started process (PID=1773) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:15:18.521+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:15:18.524+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:15:18.523+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:15:18.548+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:15:18.579+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:15:18.579+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:15:18.612+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:15:18.612+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:14:00+00:00, run_after=2024-09-21 08:16:00+00:00
+[2024-09-21T08:15:18.638+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.127 seconds
+[2024-09-21T08:15:49.409+0000] {processor.py:186} INFO - Started process (PID=1838) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:15:49.411+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:15:49.422+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:15:49.422+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:15:49.493+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:15:49.529+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:15:49.528+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:15:49.590+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:15:49.590+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:14:00+00:00, run_after=2024-09-21 08:16:00+00:00
+[2024-09-21T08:15:49.640+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.243 seconds
+[2024-09-21T08:16:20.191+0000] {processor.py:186} INFO - Started process (PID=1902) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:16:20.195+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:16:20.199+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:16:20.198+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:16:20.233+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:16:20.267+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:16:20.266+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:16:20.312+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:16:20.311+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:16:00+00:00, run_after=2024-09-21 08:18:00+00:00
+[2024-09-21T08:16:20.349+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.166 seconds
+[2024-09-21T08:16:51.086+0000] {processor.py:186} INFO - Started process (PID=1966) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:16:51.088+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:16:51.092+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:16:51.091+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:16:51.129+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:16:51.163+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:16:51.162+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:16:51.209+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:16:51.208+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:16:00+00:00, run_after=2024-09-21 08:18:00+00:00
+[2024-09-21T08:16:51.248+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.173 seconds
+[2024-09-21T08:17:22.240+0000] {processor.py:186} INFO - Started process (PID=2030) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:17:22.242+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:17:22.246+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:17:22.245+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:17:22.281+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:17:22.314+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:17:22.314+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:17:22.358+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:17:22.358+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:16:00+00:00, run_after=2024-09-21 08:18:00+00:00
+[2024-09-21T08:17:22.392+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.169 seconds
+[2024-09-21T08:17:52.732+0000] {processor.py:186} INFO - Started process (PID=2094) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:17:52.735+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:17:52.739+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:17:52.738+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:17:52.782+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:17:52.824+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:17:52.823+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:17:52.877+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:17:52.877+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:16:00+00:00, run_after=2024-09-21 08:18:00+00:00
+[2024-09-21T08:17:52.919+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.197 seconds
+[2024-09-21T08:18:23.463+0000] {processor.py:186} INFO - Started process (PID=2158) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:18:23.464+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:18:23.468+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:18:23.467+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:18:23.506+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:18:23.545+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:18:23.544+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:18:23.582+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:18:23.582+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:18:00+00:00, run_after=2024-09-21 08:20:00+00:00
+[2024-09-21T08:18:23.615+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.160 seconds
+[2024-09-21T08:18:54.111+0000] {processor.py:186} INFO - Started process (PID=2222) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:18:54.114+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:18:54.118+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:18:54.117+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:18:54.157+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:18:54.190+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:18:54.190+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:18:54.236+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:18:54.236+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:18:00+00:00, run_after=2024-09-21 08:20:00+00:00
+[2024-09-21T08:18:54.273+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.173 seconds
+[2024-09-21T08:19:24.420+0000] {processor.py:186} INFO - Started process (PID=2286) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:19:24.422+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:19:24.428+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:19:24.427+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:19:24.470+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:19:24.520+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:19:24.519+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:19:24.580+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:19:24.579+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:18:00+00:00, run_after=2024-09-21 08:20:00+00:00
+[2024-09-21T08:19:24.642+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.230 seconds
+[2024-09-21T08:19:55.579+0000] {processor.py:186} INFO - Started process (PID=2350) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:19:55.581+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:19:55.586+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:19:55.585+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:19:55.619+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:19:55.653+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:19:55.652+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:19:55.711+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:19:55.711+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:18:00+00:00, run_after=2024-09-21 08:20:00+00:00
+[2024-09-21T08:19:55.750+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.181 seconds
+[2024-09-21T08:20:26.528+0000] {processor.py:186} INFO - Started process (PID=2422) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:20:26.531+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:20:26.536+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:20:26.535+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:20:26.570+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:20:26.602+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:20:26.601+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:20:26.647+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:20:26.647+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:20:00+00:00, run_after=2024-09-21 08:22:00+00:00
+[2024-09-21T08:20:26.684+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.165 seconds
+[2024-09-21T08:20:57.713+0000] {processor.py:186} INFO - Started process (PID=2486) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:20:57.715+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:20:57.720+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:20:57.719+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:20:57.774+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:20:57.824+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:20:57.823+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:20:57.890+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:20:57.890+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:20:00+00:00, run_after=2024-09-21 08:22:00+00:00
+[2024-09-21T08:20:57.925+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.223 seconds
+[2024-09-21T08:21:28.779+0000] {processor.py:186} INFO - Started process (PID=2550) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:21:28.781+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:21:28.785+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:21:28.784+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:21:28.815+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:21:28.845+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:21:28.844+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:21:28.884+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:21:28.884+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:20:00+00:00, run_after=2024-09-21 08:22:00+00:00
+[2024-09-21T08:21:28.918+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.149 seconds
+[2024-09-21T08:21:59.662+0000] {processor.py:186} INFO - Started process (PID=2614) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:21:59.664+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:21:59.669+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:21:59.668+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:21:59.706+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:21:59.741+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:21:59.740+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:21:59.786+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:21:59.786+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:20:00+00:00, run_after=2024-09-21 08:22:00+00:00
+[2024-09-21T08:21:59.829+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.180 seconds
+[2024-09-21T08:22:30.622+0000] {processor.py:186} INFO - Started process (PID=2679) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:22:30.624+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:22:30.630+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:22:30.629+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:22:30.665+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:22:30.699+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:22:30.698+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:22:30.744+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:22:30.744+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:22:00+00:00, run_after=2024-09-21 08:24:00+00:00
+[2024-09-21T08:22:30.785+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.174 seconds
+[2024-09-21T08:23:01.043+0000] {processor.py:186} INFO - Started process (PID=2743) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:23:01.045+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:23:01.049+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:23:01.048+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:23:01.080+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:23:01.115+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:23:01.115+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:23:01.164+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:23:01.164+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:22:00+00:00, run_after=2024-09-21 08:24:00+00:00
+[2024-09-21T08:23:01.199+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.169 seconds
+[2024-09-21T08:23:31.328+0000] {processor.py:186} INFO - Started process (PID=2807) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:23:31.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:23:31.338+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:23:31.337+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:23:31.394+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:23:31.440+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:23:31.439+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:23:31.506+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:23:31.506+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:22:00+00:00, run_after=2024-09-21 08:24:00+00:00
+[2024-09-21T08:23:31.560+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.247 seconds
+[2024-09-21T08:24:02.439+0000] {processor.py:186} INFO - Started process (PID=2871) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:24:02.440+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:24:02.443+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:24:02.443+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:24:02.468+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:24:02.489+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:24:02.489+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:24:02.519+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:24:02.519+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:24:00+00:00, run_after=2024-09-21 08:26:00+00:00
+[2024-09-21T08:24:02.549+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.118 seconds
+[2024-09-21T08:24:35.125+0000] {processor.py:186} INFO - Started process (PID=2933) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:24:35.127+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:24:35.130+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:24:35.130+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:24:35.174+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:24:35.205+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:24:35.205+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:24:35.546+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:24:35.546+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:24:00+00:00, run_after=2024-09-21 08:26:00+00:00
+[2024-09-21T08:24:35.574+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.455 seconds
+[2024-09-21T08:25:05.773+0000] {processor.py:186} INFO - Started process (PID=2997) to work on /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:25:05.774+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/make_prediction.py for tasks to queue
+[2024-09-21T08:25:05.778+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:25:05.777+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:25:05.806+0000] {processor.py:925} INFO - DAG(s) 'prediction_dag' retrieved from /opt/airflow/dags/make_prediction.py
+[2024-09-21T08:25:05.834+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:25:05.834+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-09-21T08:25:06.090+0000] {logging_mixin.py:190} INFO - [2024-09-21T08:25:06.089+0000] {dag.py:4156} INFO - Setting next_dagrun for prediction_dag to 2024-09-21 08:24:00+00:00, run_after=2024-09-21 08:26:00+00:00
+[2024-09-21T08:25:06.120+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/make_prediction.py took 0.355 seconds
